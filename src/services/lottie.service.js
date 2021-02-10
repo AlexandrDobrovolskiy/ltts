@@ -1,7 +1,7 @@
 const { Lotties } = require('../models');
 
 const saveLottie = async ({ name, config }) => {
-  const created = await Lotties.create({ name, config });
+  const created = await Lotties.create({ name, config: JSON.stringify(config) });
 
   return created;
 };
