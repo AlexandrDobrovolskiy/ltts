@@ -12,7 +12,12 @@ const queryLotties = async () => {
   return lotties;
 };
 
+const removeLotties = async (ids) => {
+  await Lotties.remove({ id: { $in: ids } });
+};
+
 module.exports = {
   saveLottie,
   queryLotties,
+  removeLotties,
 };
