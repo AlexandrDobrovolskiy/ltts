@@ -14,8 +14,6 @@ const list = catchAsync(async (req, res) => {
 
 const remove = catchAsync(async (req, res) => {
   const { ids } = req.body;
-  console.log(req.body);
-  console.log(ids);
   const lotties = await lottieService.removeLotties(ids);
   res.status(httpStatus.OK).json(lotties);
 });

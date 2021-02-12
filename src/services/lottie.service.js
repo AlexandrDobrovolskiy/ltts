@@ -12,7 +12,7 @@ const queryLotties = async () => {
 };
 
 const removeLotties = async (ids) => {
-  await Lotties.deleteMany({ id: { $in: ids } });
+  await Lotties.deleteMany({ _id: { $in: ids } });
 };
 
 module.exports = {
