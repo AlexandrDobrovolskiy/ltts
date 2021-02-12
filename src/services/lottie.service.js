@@ -8,7 +8,6 @@ const saveLottie = async ({ name, config }) => {
 
 const queryLotties = async () => {
   const lotties = await Lotties.find().sort({ updatedAt: 1 });
-  console.log(lotties);
   return lotties;
 };
 
