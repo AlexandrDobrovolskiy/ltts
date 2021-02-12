@@ -5,6 +5,6 @@ const router = express.Router();
 
 router.post('/add', lottieController.add);
 router.get('/list', lottieController.list);
-router.delete('/remove', lottieController.remove);
+router.post('/remove', lottieController.remove);
 
 module.exports = router;
