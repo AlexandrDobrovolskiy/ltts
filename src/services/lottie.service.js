@@ -7,13 +7,13 @@ const saveLottie = async ({ name, config }) => {
 };
 
 const queryLotties = async () => {
-  const lotties = await Lotties.find();
-
+  const lotties = await Lotties.find().sort({ updatedAt: 1 });
+  console.log(lotties);
   return lotties;
 };
 
 const removeLotties = async (ids) => {
-  await Lotties.remove({ id: { $in: ids } });
+  await Lotties.deleteMany({ id: { $in: ids } });
 };
 
 module.exports = {

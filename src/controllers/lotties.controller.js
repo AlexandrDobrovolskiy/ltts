@@ -9,7 +9,7 @@ const add = catchAsync(async (req, res) => {
 
 const list = catchAsync(async (req, res) => {
   const lotties = await lottieService.queryLotties();
-  res.status(200).json(lotties);
+  res.status(httpStatus.OK).json(lotties);
 });
 
 const remove = catchAsync(async (req, res) => {
